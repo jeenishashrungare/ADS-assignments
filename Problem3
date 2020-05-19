@@ -1,0 +1,49 @@
+#include<iostream>
+using namespace std;
+int main()
+{
+    int b,p,f,h,c,ch;
+    cin>>ch;
+    for(int i=0;i<ch;i++)
+    {
+
+    int ham=0,chicken=0;
+
+    cin>>b>>p>>f>>h>>c;
+
+
+        if(c>h)
+        {
+            while((f>0)&&(b>1))
+            {
+                b-=2; f--;
+                chicken++;
+            }
+            while((p>0)&&(b>1))
+            {
+                b-=2; p--;
+                ham++;
+            }
+        }
+        else
+        {
+            while((p>0)&&(b>1))
+            {
+                b-=2; p--;
+                ham++;
+            }
+            while((f>0)&&(b>1))
+            {
+                b-=2; f--;
+                chicken++;
+            }
+
+        }
+
+    ham*=h;
+    chicken*=c;
+    cout<<(ham+chicken)<<endl;
+    }
+    return 0;
+}
+
